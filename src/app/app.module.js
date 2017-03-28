@@ -10,6 +10,7 @@ var platform_browser_1 = require("@angular/platform-browser");
 var router_1 = require("@angular/router");
 var app_component_1 = require("./app.component");
 var login_component_1 = require("./login/login.component");
+var aboutme_component_1 = require("./aboutme/aboutme.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -20,10 +21,12 @@ AppModule = __decorate([
         imports: [platform_browser_1.BrowserModule,
             router_1.RouterModule.forRoot([
                 { path: '', redirectTo: 'login', pathMatch: 'full' },
-                { path: 'login', component: login_component_1.LoginComponent }
+                { path: 'login', component: login_component_1.LoginComponent },
+                { path: 'aboutme', component: aboutme_component_1.AboutmeComponent }
             ])],
         declarations: [app_component_1.AppComponent,
-            login_component_1.LoginComponent],
+            login_component_1.LoginComponent,
+            aboutme_component_1.AboutmeComponent],
         bootstrap: [app_component_1.AppComponent],
     })
 ], AppModule);

@@ -1,5 +1,85 @@
 h1 {
-  color: #369;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 250%;
+  color:#00008B;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 200%; 
+  text-align: center;
+} 
+.loginMenuContainer {
+	position: absolute;
+	background-color: #0B3C5D;
+	height: 265px;
+	width: 300px;
+	top: 30%;
+	left: 38.5%;
+	opacity: 0.5;
+	border-radius: 25px;
+	text-align: center;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+input[type=username], select {
+    width: 80%;
+    padding: 12px;
+    margin-top: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=password], select {
+    width: 80%;
+    padding: 12px;
+    margin-top: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+	font:small-caption;
+	font-size:13px;
+}
+input[type=submit] {
+    width: 40%;
+    background-color: gray;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+} 
+input[type=register]{ 
+    width: 40%;
+    background-color: gray;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; 
+    
+
+} 
+.loginbuttons
+{
+  position: absolute; 
+    
+}
+input[type=submit]:hover {
+    background-color:#034694;
+} 
+input[type=submit]:active {
+    background-color: #043668;
+} 
+input[type=register]:hover {
+    background-color:#034694;
+} 
+input[type=register]:active {
+    background-color: #043668;
+} 
+.aboutmeContainer
+{
+  position: absolute;
+  background-color:#034694;
+  height: 100%;
+  width: 100%;
 }

@@ -10,26 +10,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var LoginComponent = (function () {
-    function LoginComponent(router) {
+var AboutmeComponent = (function () {
+    function AboutmeComponent(router) {
         this.router = router;
         this.name = 'Angular';
     }
-    LoginComponent.prototype.loginAccount = function () {
-        this.router.navigateByUrl('/aboutme');
+    AboutmeComponent.prototype.homeButtonAccount = function () {
+        this.router.navigateByUrl('/login');
     };
-    LoginComponent.prototype.registerAction = function () {
-        this.router.navigateByUrl('./register');
-    };
-    return LoginComponent;
+    return AboutmeComponent;
 }());
-LoginComponent = __decorate([
+AboutmeComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        selector: 'login-app',
-        templateUrl: 'login.component.html',
+        selector: 'aboutme-app',
+        templateUrl: 'aboutme.component.html',
     }),
     __metadata("design:paramtypes", [router_1.Router])
-], LoginComponent);
-exports.LoginComponent = LoginComponent;
-//# sourceMappingURL=login.component.js.map
+], AboutmeComponent);
+exports.AboutmeComponent = AboutmeComponent;
+//# sourceMappingURL=aboutme.component.js.map
