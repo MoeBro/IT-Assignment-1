@@ -10,16 +10,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
+var app_component_1 = require("../app.component");
 var LoginComponent = (function () {
-    function LoginComponent(router) {
+    function LoginComponent(router, app) {
         this.router = router;
+        this.app = app;
         this.name = 'Angular';
     }
     LoginComponent.prototype.loginAccount = function () {
+        localStorage.setItem('user', JSON.stringify(this.username));
+        this.app.guest = false;
+        this.app.user = true;
         this.router.navigateByUrl('/aboutme');
-    };
-    LoginComponent.prototype.registerAction = function () {
-        this.router.navigateByUrl('./register');
     };
     return LoginComponent;
 }());
@@ -29,7 +31,7 @@ LoginComponent = __decorate([
         selector: 'login-app',
         templateUrl: 'login.component.html',
     }),
-    __metadata("design:paramtypes", [router_1.Router])
+    __metadata("design:paramtypes", [router_1.Router, app_component_1.AppComponent])
 ], LoginComponent);
 exports.LoginComponent = LoginComponent;
 //# sourceMappingURL=login.component.js.map

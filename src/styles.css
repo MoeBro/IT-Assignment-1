@@ -1,85 +1,267 @@
-h1 {
-  color:#00008B;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 200%; 
-  text-align: center;
+.header{
+    position: fixed;
+    float: right;
+    width: 100%;
+    height: 5%;
+    right: 0%;
+    top: 0%;
+    z-index: 1000;
+    padding: 10px;
+    text-align: right;
+    background-color: black;
+    opacity: 0.5;
+}
+
+.loginTitle {
+    position: fixed;
+    color: white;
+    font-family: "Verdana", serif;
+    font-weight: normal;
+    word-spacing: 20px;
+    letter-spacing: 5px;
+    margin: 0;
+    font-size: 70px; 
+    text-align: center;
+    top: 10%;
+    left: 20%;
+    opacity: 0.8;
+    word-wrap: break-word;
+    width: 60%;
+    border-bottom: 2px solid white;
+    padding-bottom: 30px;
 } 
+
+.aboutmeTitle{
+    position: fixed;
+    color: white;
+    font-family: "Verdana", serif;
+    font-weight: normal;
+    word-spacing: 20px;
+    letter-spacing: 5px;
+    font-size: 80px; 
+    text-align: center;
+    top: 5%;
+    left: 20%;
+    opacity: 0.8;
+    width: 60%;
+    border-bottom: 2px solid white;
+}
+
+.aboutmeContent{
+    position: fixed;
+    color: white;
+    font-family: "Verdana", serif;
+    font-weight: normal;
+    font-size: 15px; 
+    text-align: left;
+    top: 35%;
+    left: 20%;
+    width: 60%;
+}
+
+.aboutmeBackground{
+    position: fixed;
+    height: 70%;
+    width: 64%;
+    top: 12%;
+    left: 18%;
+    background-color: black;
+    border-radius: 20px;
+    opacity: 0.4;
+}
+
 .loginMenuContainer {
 	position: absolute;
-	background-color: #0B3C5D;
 	height: 265px;
 	width: 300px;
-	top: 30%;
+	top: 50%;
 	left: 38.5%;
-	opacity: 0.5;
-	border-radius: 25px;
 	text-align: center;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.registerMenuContainer{
+    position: absolute;
+	height: 265px;
+	width: 300px;
+	top: 35%;
+	left: 38.5%;
+	text-align: center;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 input[type=username], select {
     width: 80%;
-    padding: 12px;
+    font-size: 18px;
+    color: white;
     margin-top: 10px;
     display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: none;
+    border-bottom: 2px solid white;
     box-sizing: border-box;
+    background: transparent;
+    outline: none;
+    opacity: 0.8;
 }
 
 input[type=password], select {
     width: 80%;
-    padding: 12px;
+    font-size: 18px;
+    color: white;
     margin-top: 10px;
     display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: none;
+    border-bottom: 2px solid white;
     box-sizing: border-box;
-	font:small-caption;
-	font-size:13px;
+    background: transparent;
+    outline: none;
+    opacity: 0.8;
 }
-input[type=submit] {
-    width: 40%;
-    background-color: gray;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-} 
-input[type=register]{ 
-    width: 40%;
-    background-color: gray;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer; 
-    
 
+input[type=submit] {
+    width: 80%;
+    background-color: transparent;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 4px solid white;
+    cursor: pointer;
+    opacity: 0.8;
+    outline: none;
+    transition-duration: 0.3s;
 } 
-.loginbuttons
-{
-  position: absolute; 
-    
-}
+
 input[type=submit]:hover {
-    background-color:#034694;
+    width: 90%;
+    padding: 18px 26px;
 } 
+
 input[type=submit]:active {
-    background-color: #043668;
+    background-color: #004d33;
 } 
-input[type=register]:hover {
-    background-color:#034694;
+
+.inputContainer{
+    position: absolute;
+    bottom: 50%;
+    left: 30%;
+    z-index: 2;
+}
+
+.inputFile {
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+}
+
+.inputFile + .inputLabel {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.25em;
+    font-weight: 700;
+    color: white;
+    background-color: transparent;
+    display: inline-block;
+    cursor: pointer;
+    border: 4px solid white;
+    margin: 100%;
+    width: 75%;
+    padding: 20px;
+}
+
+.signinHeader {
+    width: 5%;
+    background-color: transparent;
+    color: white;
+    padding: 4px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 4px solid white;
+    cursor: pointer;
+    opacity: 0.8;
+    outline: none;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition-duration: 0.3s;
 } 
-input[type=register]:active {
-    background-color: #043668;
+
+.signinHeader:hover {
+    width: 8%;
 } 
-.aboutmeContainer
-{
+
+.signupHeader {
+    width: 5%;
+    background-color: transparent;
+    color: white;
+    padding: 4px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 4px solid white;
+    cursor: pointer;
+    opacity: 0.8;
+    outline: none;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition-duration: 0.3s;
+} 
+
+.signupHeader:hover {
+    width: 8%;
+} 
+
+.aboutmeContainer{
   position: absolute;
   background-color:#034694;
   height: 100%;
   width: 100%;
 }
+
+.background{
+    position: fixed;
+	height: 110%;
+	width: 100%;
+    right: 0%;
+    top: 0%;
+    z-index: -1;
+}
+
+.imageTable{
+    position: absolute;
+    width: 99%;
+    top: 25%;
+    column-count: 5;
+    line-height: 0;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.preview {
+    box-shadow: 0px 0px 5px black;
+    margin: 1%;
+    width: 98%;
+    height: 98%;
+    padding: 0;
+}
+
+.displayImage{
+    position: fixed;
+    max-width: 90%;
+    max-height: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.displayImageBackground{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    pointer-events: none;
+}
+

@@ -1,9 +1,8 @@
-<div class="loginMenuContainer">
-    <h1>Login</h1>
-    <input type="username" id="username" name="username" placeholder="Username" >
-    <input type="password" id="password" name="password" placeholder="Password" >
-    <div class ="loginbuttons" >
+<div>
+    <h1 class="loginTitle">WELCOME TO THE IMAGE GALLERY</h1>
+    <div class="loginMenuContainer">
+        <input type="username" id="username" name="username" placeholder="Username" [(ngModel)]="username">
+        <input type="password" id="password" name="password" placeholder="Password" [(ngModel)]="password">
         <input type="submit" value="Log in" (click)="loginAccount()">
-        <input type="register" value ="register" (click)="registerAction()">
-    </div>
-</div> 
+    </div> 
+</div>

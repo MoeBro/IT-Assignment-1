@@ -10,36 +10,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var AppComponent = (function () {
-    function AppComponent(router) {
+var RegisterComponent = (function () {
+    function RegisterComponent(router) {
         this.router = router;
         this.name = 'Angular';
     }
-    AppComponent.prototype.ngOnInit = function () {
-        if (localStorage.getItem('user') === null) {
-            this.user = false;
-            this.guest = true;
-        }
-        else if (localStorage.getItem('user') !== null) {
-            this.guest = false;
-            this.user = true;
-        }
+    RegisterComponent.prototype.registerAction = function () {
+        console.log("registering is possible soon!");
     };
-    AppComponent.prototype.logoutAccount = function () {
-        localStorage.removeItem('user');
-        this.user = false;
-        this.guest = true;
-        this.router.navigateByUrl('/login');
-    };
-    return AppComponent;
+    return RegisterComponent;
 }());
-AppComponent = __decorate([
+RegisterComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
-        selector: 'my-app',
-        templateUrl: 'app.component.html',
+        selector: 'register-app',
+        templateUrl: 'register.component.html',
     }),
     __metadata("design:paramtypes", [router_1.Router])
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], RegisterComponent);
+exports.RegisterComponent = RegisterComponent;
+//# sourceMappingURL=register.component.js.map

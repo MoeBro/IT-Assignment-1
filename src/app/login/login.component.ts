@@ -1,21 +1,22 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AppComponent }  from '../app.component';
 
 @Component({
   moduleId: module.id,
   selector: 'login-app',
   templateUrl: 'login.component.html',
 })
-export class LoginComponent {
-  constructor(private router: Router){}
-  username: String;
-  password: String;
-  name = 'Angular';
+export class LoginComponent { name = 'Angular';
+  constructor(private router: Router, private app: AppComponent){}
+  username: string;
+  password: string;
+  
   loginAccount() {
-   this.router.navigateByUrl('/aboutme');
-  }
-  registerAction(){
-    this.router.navigateByUrl('./register')
+    localStorage.setItem('user', JSON.stringify(this.username));
+    this.app.guest = false;
+    this.app.user = true;
+    this.router.navigateByUrl('/aboutme');
   }
 }
 

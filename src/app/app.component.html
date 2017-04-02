@@ -1,0 +1,18 @@
+<img class="background" id="background" src="./image/background.png">
+
+<div *ngIf="guest">
+    <div class="header">
+        <a routerLink="/login"><button class="signinHeader">Sign in</button></a>
+        <a routerLink="/register"><button class="signupHeader">Sign up</button></a>
+    </div>
+</div>
+
+<div *ngIf="user">
+    <div class="header">
+        <a routerLink="/gallery"><button class="signinHeader">Gallery</button></a>
+        <a routerLink="/aboutme"><button class="signinHeader">About</button></a>
+        <button class="signinHeader" (click)="logoutAccount()">Log off</button>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

@@ -10,36 +10,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var AppComponent = (function () {
-    function AppComponent(router) {
+var AuthService = (function () {
+    function AuthService(router) {
         this.router = router;
-        this.name = 'Angular';
     }
-    AppComponent.prototype.ngOnInit = function () {
-        if (localStorage.getItem('user') === null) {
-            this.user = false;
-            this.guest = true;
+    AuthService.prototype.canActivate = function () {
+        if (localStorage.getItem('user')) {
+            return true;
         }
-        else if (localStorage.getItem('user') !== null) {
-            this.guest = false;
-            this.user = true;
+        else {
+            this.router.navigateByUrl('/login');
+            return false;
         }
     };
-    AppComponent.prototype.logoutAccount = function () {
-        localStorage.removeItem('user');
-        this.user = false;
-        this.guest = true;
-        this.router.navigateByUrl('/login');
-    };
-    return AppComponent;
+    return AuthService;
 }());
-AppComponent = __decorate([
-    core_1.Component({
-        moduleId: module.id,
-        selector: 'my-app',
-        templateUrl: 'app.component.html',
-    }),
+AuthService = __decorate([
+    core_1.Injectable(),
     __metadata("design:paramtypes", [router_1.Router])
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], AuthService);
+exports.AuthService = AuthService;
+//# sourceMappingURL=auth.service.js.map

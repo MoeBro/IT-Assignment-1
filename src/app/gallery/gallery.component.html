@@ -1,0 +1,11 @@
+<div class="inputContainer">
+    <input type="file" name="file" id="file" class="inputFile" accept="image/*" (change)="changeListner($event)">
+    <label for="file" class="inputLabel">Choose a file</label>
+</div>
+<section class="imageTable">
+    <div *ngFor="let img of imageArray; let i=index">
+        <img class="preview" [src]="imageArray[i]" (click)="viewImage(i)">
+    </div>
+</section>
+<img class="displayImage" (click)="closeImage()">
+<div class="displayImageBackground" (click)="closeImage()"></div>

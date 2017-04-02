@@ -6,10 +6,4 @@ import { Router } from '@angular/router';
   selector: 'aboutme-app',
   templateUrl: 'aboutme.component.html',
 })
-export class AboutmeComponent {
-  constructor(private router: Router){}
-  name = 'Angular';
-  homeButtonAccount() {
-   this.router.navigateByUrl('/login');
-  }
-}
+export class AboutmeComponent { name = 'Angular'; }

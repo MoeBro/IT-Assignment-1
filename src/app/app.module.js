@@ -8,9 +8,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var router_1 = require("@angular/router");
+var forms_1 = require("@angular/forms");
 var app_component_1 = require("./app.component");
 var login_component_1 = require("./login/login.component");
 var aboutme_component_1 = require("./aboutme/aboutme.component");
+var register_component_1 = require("./register/register.component");
+var gallery_component_1 = require("./gallery/gallery.component");
+var auth_service_1 = require("./guard/auth.service");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -19,14 +23,21 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule,
+            forms_1.FormsModule,
+            forms_1.ReactiveFormsModule,
             router_1.RouterModule.forRoot([
                 { path: '', redirectTo: 'login', pathMatch: 'full' },
                 { path: 'login', component: login_component_1.LoginComponent },
-                { path: 'aboutme', component: aboutme_component_1.AboutmeComponent }
+                { path: 'register', component: register_component_1.RegisterComponent },
+                { path: 'aboutme', component: aboutme_component_1.AboutmeComponent, canActivate: [auth_service_1.AuthService] },
+                { path: 'gallery', component: gallery_component_1.GalleryComponent, canActivate: [auth_service_1.AuthService] },
             ])],
         declarations: [app_component_1.AppComponent,
             login_component_1.LoginComponent,
-            aboutme_component_1.AboutmeComponent],
+            aboutme_component_1.AboutmeComponent,
+            register_component_1.RegisterComponent,
+            gallery_component_1.GalleryComponent,],
+        providers: [auth_service_1.AuthService],
         bootstrap: [app_component_1.AppComponent],
     })
 ], AppModule);
