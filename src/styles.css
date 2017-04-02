@@ -142,8 +142,8 @@ input[type=submit]:active {
 
 .inputContainer{
     position: absolute;
-    bottom: 50%;
-    left: 30%;
+    top: 10%;
+    left: 45%;
     z-index: 2;
 }
 
@@ -151,6 +151,7 @@ input[type=submit]:active {
     opacity: 0;
     overflow: hidden;
     position: absolute;
+    cursor: pointer;
 }
 
 .inputFile + .inputLabel {
@@ -162,7 +163,6 @@ input[type=submit]:active {
     display: inline-block;
     cursor: pointer;
     border: 4px solid white;
-    margin: 100%;
     width: 75%;
     padding: 20px;
 }
@@ -230,7 +230,7 @@ input[type=submit]:active {
     width: 99%;
     top: 25%;
     column-count: 5;
-    line-height: 0;
+    /*line-height: 0;*/
     overflow: hidden;
     z-index: 3;
 }
