@@ -1,0 +1,1 @@
+To open the website locate the folder "IT-Assignment1Group1" in the command prompt and type "npm start". 
